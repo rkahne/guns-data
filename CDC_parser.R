@@ -154,6 +154,16 @@ url <- "ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/mortality/mort
 # Now run the function for each year you want:
 CDC_parser(year, url)
 
+year <- 2014
+url <- "ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/mortality/mort2014us.zip"
+CDC_parser(year, url)
+
+year <- 2012
+url <- "ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/mortality/mort2012us.zip"
+CDC_parser(year, url)
+
+
+
 
 #########################################################################################################################
 

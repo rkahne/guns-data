@@ -23,8 +23,8 @@ load("all_guns.RData") # Assumes you have already run CDC_parser code.
 guns_for_interactive <- all_guns %>%
   mutate(age_group = cut(age, breaks = c(-1,14,34,64,107), labels = c("0-14", "15-34", "35-64", "65+")),
          age_group = ifelse(is.na(age), "Unknown", age_group),
-         age_group = factor(age_group, labels = c("0-14", "15-34", "35-64", "65+", "Unknown")))
-select(year, intent, sex, age_group, race)
+         age_group = factor(age_group, labels = c("0-14", "15-34", "35-64", "65+", "Unknown"))) %>% 
+  select(year, intent, sex, age_group, race)
 
 
 # Now we will set up another data frame with the actual encoding.

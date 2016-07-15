@@ -124,10 +124,10 @@ converter.race <- function(code) {
   eval(as.name(var))
 }
 
-encoding$Intent <- mapply(function(x) converter.intent(x), encoding_check$Code)
-encoding$Gender <- mapply(function(x) converter.sex(x), encoding_check$Code)
-encoding$Age <- mapply(function(x) converter.age(x), encoding_check$Code)
-encoding$Race <- mapply(function(x) converter.race(x), encoding_check$Code)
+encoding$Intent <- mapply(function(x) converter.intent(x), encoding$code)
+encoding$Gender <- mapply(function(x) converter.sex(x), encoding$code)
+encoding$Age <- mapply(function(x) converter.age(x), encoding$code)
+encoding$Race <- mapply(function(x) converter.race(x), encoding$code)
 
 # Now we'll calculate the actual numbers.
 
